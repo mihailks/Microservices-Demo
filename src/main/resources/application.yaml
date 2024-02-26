@@ -1,0 +1,22 @@
+spring:
+ datasource:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  url: "jdbc:mysql://localhost:3306/students?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC"
+  username: root
+  password: root
+
+ sql:
+  init:
+   mode: never
+ mvc:
+  hiddenmethod:
+   filter:
+    enabled: true
+ jpa:
+  hibernate:
+   ddl-auto: update
+  open-in-view: false
+  properties:
+   hibernate:
+    format_sql: true
+  defer-datasource-initialization: true
