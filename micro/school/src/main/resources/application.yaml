@@ -7,12 +7,12 @@ eureka:
 
 spring:
   application:
-    name: students
+    name: schools
   config:
     import: optional:configserver:http://localhost:8888
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://localhost:3306/students?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC"
+    url: "jdbc:mysql://localhost:3306/schools?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC"
     username: root
     password: root
   jpa:
@@ -22,4 +22,8 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
 
 server:
-  port: 8090
+  port: 8070
+
+application:
+  config:
+    students-url: http://localhost:8090/api/v1/students
